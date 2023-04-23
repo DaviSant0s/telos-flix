@@ -1,5 +1,4 @@
 import React from 'react'
-import Body from '../body'
 
 
 function Header() {
