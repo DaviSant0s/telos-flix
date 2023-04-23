@@ -138,7 +138,7 @@ export default function MiniDrawer() {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton sx={{color: "#fff"}} onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
@@ -156,7 +156,7 @@ export default function MiniDrawer() {
               >
                 <ListItemIcon
                   sx={{
-                    color: "#fff",
+                    color: "#FAFAFA",
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
