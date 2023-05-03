@@ -97,13 +97,12 @@ export default function MiniDrawer() {
   const theme = useTheme();
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', paddingTop: `${theme.mixins.toolbar.minHeight}px` }}>
       <CssBaseline />
       <AppBar position="fixed" elevation={0}>
         <Toolbar sx={{
           display: "flex",
           justifyContent:"space-between",
-
         }}>
 
           <img src={logo} alt="logo"/>
@@ -154,7 +153,6 @@ export default function MiniDrawer() {
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {/* Apagou aqui */}
       </Box>
     </Box>
   );

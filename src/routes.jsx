@@ -8,7 +8,7 @@ export default function AppRoutes() {
     <BrowserRouter>
         <Routes>
             <Route element={<Home/>} path='/' exact/>
-            <Route element={<Video/>} path='/video'/>
+            <Route element={<Video/>} path='/videos'/>
         </Routes>
     </BrowserRouter>
   )
