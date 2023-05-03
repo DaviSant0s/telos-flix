@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import React from 'react'
 import MainVideo from '../../components/mainVideo';
 import Trending from '../../components/trending';
