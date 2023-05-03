@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import React from 'react'
+import MainVideo from '../../components/mainVideo';
 
 function Home() {
   return (
     <div>
-        Home
-        <Link to="/videos">Video</Link>
+      <MainVideo/>
     </div>
   )
 }
