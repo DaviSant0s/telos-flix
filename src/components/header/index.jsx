@@ -19,6 +19,8 @@ import LoginButton from '../loginButton';
 import CriateAccountButton from '../criateAccountButton';
 import AppBarActions from '../appBarActions';
 
+
+/* , paddingTop: `${theme.mixins.toolbar.minHeight}px`  */
 const drawerWidth = 240;
 
 /* Estilização de quando ele tá aberto (open)*/
@@ -97,35 +99,30 @@ export default function MiniDrawer() {
   const theme = useTheme();
 
   return (
-    <Box sx={{ display: 'flex', paddingTop: `${theme.mixins.toolbar.minHeight}px` }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar position="fixed" elevation={0}>
         <Toolbar sx={{
           display: "flex",
           justifyContent:"space-between",
         }}>
-
           <img src={logo} alt="logo"/>
           <AppBarActions actions={[<CriateAccountButton/>, <LoginButton/>]}/>
-
         </Toolbar>
       </AppBar>
-
       <Drawer variant="permanent">
         <DrawerHeader>
           <IconButton sx={{color: "#fff"}}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
-
-        <List 
+        <List
           sx={{
-            height: "100%", 
-            display: "flex", 
-            flexDirection: "column", 
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
             justifyContent: "center"
           }}>
-
           {['Home', 'Search'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
@@ -155,6 +152,7 @@ export default function MiniDrawer() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       </Box>
     </Box>
+
   );
 }
 

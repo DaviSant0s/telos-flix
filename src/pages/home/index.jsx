@@ -4,9 +4,11 @@ import Trending from '../../components/trending';
 
 function Home() {
   return (
-    <div>
-      <MainVideo/>
-      <Trending/>
+    <div style={{marginTop: '0.80%', marginLeft: '3.52%'}}>
+      <div style={{paddingTop: '1%'}}>
+        <MainVideo/>
+        <Trending/>
+      </div>
     </div>
   )
 }

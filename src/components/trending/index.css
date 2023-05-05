@@ -1,22 +1,8 @@
-.trendingSection{
-    background-color: red;
-    width: 100%;
+.trendingSection .labelSection{
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-
-.labelSection{
-
-}
-
-/* .trendingSection .labelSection{
-    display: flex;
-    flex-direction: row;
     justify-content: start;
     align-items: center;
 }
 .trendingSection{
     width: 100%;
-} */
+}
