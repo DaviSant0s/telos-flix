@@ -3,6 +3,7 @@ import MainVideo from '../../components/mainVideo';
 import Trending from '../../components/trending';
 import EnjoyForFree from '../../components/enjoyForFree';
 import './index.css'
+import DontKnowWhatToWatch from '../../components/dontKnowWhatToWatch';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
         <div className='sectionsGrid'>
           <Trending/>
           <EnjoyForFree/>
+          <DontKnowWhatToWatch/>
         </div>
       </div>
     </div>
