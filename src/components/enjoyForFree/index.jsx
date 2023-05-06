@@ -1,4 +1,4 @@
-import { SignalCellularAltOutlined } from '@mui/icons-material'
+import { CardGiftcardOutlined, GifOutlined } from '@mui/icons-material'
 import React from 'react'
 import './index.css'
 import MiniVideoCard from '../miniVideoCard'
@@ -19,7 +19,7 @@ export default function EnjoyForFree() {
   return (
     <div className='enjoyForFreeSection'>
         <div className='labelSection'>
-          <SignalCellularAltOutlined/> Em alta
+          <CardGiftcardOutlined/> Aproveite grátis
         </div>
 
         <div className='enjoyForFreeVideosGrid'>
@@ -31,3 +31,4 @@ export default function EnjoyForFree() {
     </div>
   )
 }
+
