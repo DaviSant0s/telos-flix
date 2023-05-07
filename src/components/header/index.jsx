@@ -20,6 +20,7 @@ import LoginButton from '../loginButton';
 import CriateAccountButton from '../criateAccountButton';
 import AppBarActions from '../appBarActions';
 import CustomModal from '../customModal';
+import LoginModalContent from '../loginModalContent';
 
 
 /* , paddingTop: `${theme.mixins.toolbar.minHeight}px`  */
@@ -110,7 +111,7 @@ export default function MiniDrawer() {
           justifyContent:"space-between",
         }}>
           <img src={logo} alt="logo"/>
-          <AppBarActions actions={[<CriateAccountButton onClick={() => setOpen(true)}/>, <LoginButton/>]}/>
+          <AppBarActions actions={[<CriateAccountButton/>, <LoginButton onClick={() => setOpen(true)}/>]}/>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent">
@@ -154,7 +155,7 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       </Box>
-      <CustomModal open={open} setOpen={setOpen}/>
+      <CustomModal open={open} setOpen={setOpen} content={<LoginModalContent/>}/>
     </Box> 
 
   );
