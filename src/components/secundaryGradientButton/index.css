@@ -28,5 +28,7 @@ button.secundaryGrandientButton{
     /* Color/Neutral/200 */
 
     color: #EEEEEE;
+
+    cursor: pointer;
 }
 

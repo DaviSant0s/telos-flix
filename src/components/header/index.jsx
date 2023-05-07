@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { useState } from 'react';
+
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -18,6 +19,7 @@ import logo from './Brand.png'
 import LoginButton from '../loginButton';
 import CriateAccountButton from '../criateAccountButton';
 import AppBarActions from '../appBarActions';
+import CustomModal from '../customModal';
 
 
 /* , paddingTop: `${theme.mixins.toolbar.minHeight}px`  */
@@ -97,6 +99,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function MiniDrawer() {
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
 
   return (
     <Box sx={{ display: 'flex'}}>
@@ -107,7 +110,7 @@ export default function MiniDrawer() {
           justifyContent:"space-between",
         }}>
           <img src={logo} alt="logo"/>
-          <AppBarActions actions={[<CriateAccountButton/>, <LoginButton/>]}/>
+          <AppBarActions actions={[<CriateAccountButton onClick={() => setOpen(true)}/>, <LoginButton/>]}/>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent">
@@ -151,7 +154,8 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       </Box>
-    </Box>
+      <CustomModal open={open} setOpen={setOpen}/>
+    </Box> 
 
   );
 }

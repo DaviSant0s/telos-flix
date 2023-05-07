@@ -10,21 +10,17 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+  bgcolor: 'black',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
 
-export default function CustomModal() {
-  const [open, setOpen] = React.useState(false); // o open e setOpen serve para dizer se o modal deve ser aberto ou não
-  const handleOpen = () => setOpen(true);
+export default function CustomModal( {open, setOpen} ) {
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button> {/* Quando clicamos nesse botão, ele diz que devemos abrir */}
-
       <Modal
         open={open} // props que diz se o modal está aberto ou não
         onClose={handleClose} //props

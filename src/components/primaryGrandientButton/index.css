@@ -26,4 +26,6 @@ button.primaryGrandientButton {
     align-items: center;
 
     color: #212121;
+
+    cursor: pointer;
 }
