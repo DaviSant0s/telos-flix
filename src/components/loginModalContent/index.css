@@ -26,3 +26,31 @@
     display: flex;
     justify-content: end;
 }
+
+.secondSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondSection .input-label{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #EEEEEE;
+}
+
+.secondSection .inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.secondSection .buttonsSection{
+    margin-top: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
