@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import image from './image.png';
 import { FormControl, IconButton, InputAdornment } from '@mui/material';
@@ -9,6 +9,8 @@ import CustomOutlinedInput from '../customOutlinedInput';
 import PasswordOutlinedInput from '../passwordOutlinedInput';
 
 export default function LoginModalContent() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
     <div className='loginModalContent'>
       <div className='firstSection'>
@@ -21,15 +23,13 @@ export default function LoginModalContent() {
       </div>
 
       <div className='secondSection'>
-
       <FormControl sx={{ m: 1, width: '366px' }}>
-
         {/* Input 1 */}
         <div className='inputContainer'>
           
           <label className='input-label'>Email</label>
-
           <CustomOutlinedInput 
+          setValue={setEmail}
           placeholder='Email' 
           type='text' 
           startAdornment={
@@ -47,7 +47,7 @@ export default function LoginModalContent() {
         <div className='inputContainer' style={{marginTop: '30px'}}>
 
           <label className='input-label'>Senha</label>
-          <PasswordOutlinedInput/>
+          <PasswordOutlinedInput setValue={setPassword}/>
 
         </div>
 

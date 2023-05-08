@@ -3,9 +3,10 @@ import CustomOutlinedInput from '../customOutlinedInput'
 import { IconButton, InputAdornment } from '@mui/material'
 import { Visibility } from '@mui/icons-material'
 
-export default function PasswordOutlinedInput() {
+export default function PasswordOutlinedInput( {setValue} ) {
   return (
     <CustomOutlinedInput 
+        setValue={setValue}
         placeholder='Senha' 
         type='password' 
         startAdornment={
