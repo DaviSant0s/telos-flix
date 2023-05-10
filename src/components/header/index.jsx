@@ -14,7 +14,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import {Search, Home} from '@mui/icons-material';
+import { Search, Home, Troubleshoot } from '@mui/icons-material';
 import logo from './Brand.png'
 import LoginButton from '../loginButton';
 import CriateAccountButton from '../criateAccountButton';
@@ -98,25 +98,44 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function MiniDrawer() {
+export default function Header() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [contentToShow, setContentToShow] = useState(<></>)
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" elevation={0}>
         <Toolbar sx={{
           display: "flex",
-          justifyContent:"space-between",
+          justifyContent: "space-between",
         }}>
-          <img src={logo} alt="logo"/>
-          <AppBarActions actions={[<CriateAccountButton/>, <LoginButton onClick={() => setOpen(true)}/>]}/>
+          <img src={logo} alt="logo" />
+
+          <AppBarActions
+            actions={[
+              <CriateAccountButton  
+                onClick={() => {
+                  setContentToShow(<div>Create Account</div>);
+                  setOpen(true);
+                }}
+              />,
+
+              <LoginButton
+                onClick={() => {
+                  setContentToShow(<LoginModalContent />);
+                  setOpen(true);
+                }}
+              />
+            ]} 
+          />
+
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent">
         <DrawerHeader>
-          <IconButton sx={{color: "#fff"}}>
+          <IconButton sx={{ color: "#fff" }}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
@@ -155,8 +174,8 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       </Box>
-      <CustomModal open={open} setOpen={setOpen} content={<LoginModalContent/>}/>
-    </Box> 
+      <CustomModal open={open} setOpen={setOpen} content={contentToShow} />
+    </Box>
 
   );
 }
