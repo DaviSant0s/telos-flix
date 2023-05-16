@@ -2,13 +2,18 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Video from './pages/video';
+import MovieProvider from './contexts/MovieProvider';
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
         <Routes>
             <Route element={<Home/>} path='/' exact/>
-            <Route element={<Video/>} path='/videos'/>
+            <Route element={
+              <MovieProvider>
+                <Video/>
+              </MovieProvider>
+            } path='/videos'/>
         </Routes>
     </BrowserRouter>
   )

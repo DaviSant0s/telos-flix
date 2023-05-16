@@ -6,7 +6,7 @@
     padding: 0!important;
 }
 
-.firstSection{
+.loginModalContent .firstSection{
     background: rgba(238, 238, 238, 0.05);
     height: 100%;
     padding: 72px;
@@ -20,20 +20,20 @@
     flex-direction: column;
 }
 
-.imageContainer{
+.loginModalContent .imageContainer{
     padding-top: 96px;
     width: 100%;
     display: flex;
     justify-content: end;
 }
 
-.secondSection{
+.loginModalContent .secondSection{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.secondSection .input-label{
+.loginModalContent .secondSection .input-label{
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -42,13 +42,13 @@
     color: #EEEEEE;
 }
 
-.secondSection .inputContainer{
+.loginModalContent .secondSection .inputContainer{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.secondSection .buttonsSection{
+.loginModalContent .secondSection .buttonsSection{
     margin-top: 88px;
     display: flex;
     flex-direction: column;

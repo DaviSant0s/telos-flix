@@ -21,6 +21,7 @@ import CriateAccountButton from '../criateAccountButton';
 import AppBarActions from '../appBarActions';
 import CustomModal from '../customModal';
 import LoginModalContent from '../loginModalContent';
+import CreateAccountModalContent from '../createAccountModalContent';
 
 
 /* , paddingTop: `${theme.mixins.toolbar.minHeight}px`  */
@@ -117,7 +118,7 @@ export default function Header() {
             actions={[
               <CriateAccountButton  
                 onClick={() => {
-                  setContentToShow(<div>Create Account</div>);
+                  setContentToShow(<CreateAccountModalContent/>);
                   setOpen(true);
                 }}
               />,

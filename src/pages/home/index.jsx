@@ -7,7 +7,7 @@ import DontKnowWhatToWatch from '../../components/dontKnowWhatToWatch';
 
 function Home() {
   return (
-    <div style={{marginTop: '0.80%', marginLeft: '3.52%'}}>
+    <div style={{marginTop: '0.80%', marginLeft: '3.52%', backgroundColor: 'transparent'}}>
       <div style={{paddingTop: '1%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <MainVideo/>
         <div className='sectionsGrid'>
